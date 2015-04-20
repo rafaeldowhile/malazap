@@ -23,11 +23,11 @@ class CarteiroController extends Controller {
 
 		if ($campanha == 'texto') {
 			foreach($telefones as $telefone) {
-				WA::sendMessage($telefone, $mensagem);
+				WA::sendMessage(strval($telefone), $mensagem);
 			}
 		} else {
 			foreach($telefones as $telefone) {
-				WA::sendMessageImage($telefone, $imagem);
+				WA::sendMessageImage(strval($telefone), $imagem);
 			}
 		}
 

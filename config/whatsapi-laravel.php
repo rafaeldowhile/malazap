@@ -27,7 +27,7 @@ return array(
     'accounts'         => array(
         'default'    => array('nickname' => 'Rafael',
                               'number'   => '555185047452',
-                              'password' => '7e+D1nMlRgOUMY/JMc/eo9S5Iiw=',
+                              'password' => 'LjVzb67OOBWFr1UjTdfSmRKiSD8=',
                               'identity' => '37cf08ce9ae2a9ea21bc50002c0fb843'
         ),
         'another'    => array('nickname' => 'Rafael Fonseca',
