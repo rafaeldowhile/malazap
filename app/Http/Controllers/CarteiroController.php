@@ -21,7 +21,7 @@ class CarteiroController extends Controller {
 		$mensagem  = Input::get('texto');
 		$imagem    = Input::get('imagem');
 
-		if ($campanha === 'texto') {
+		if ($campanha == 'texto') {
 			foreach($telefones as $telefone) {
 				WA::sendMessage($telefone, $mensagem);
 			}
