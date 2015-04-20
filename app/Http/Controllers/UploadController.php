@@ -4,7 +4,6 @@ use Carbon;
 use Auth;
 use Excel;
 use Input;
-use Log;
 use Cache;
 
 class UploadController extends Controller {
@@ -28,8 +27,9 @@ class UploadController extends Controller {
      Cache::put('contatos_' . $id, $telefones, 100);
    });
    $id = Auth::user()->id;
+
    $telefones = Cache::get('contatos_' . $id);
-   Log::info($telefones);
+
    return view('configurar', array('telefones' => $telefones));
 
   }
