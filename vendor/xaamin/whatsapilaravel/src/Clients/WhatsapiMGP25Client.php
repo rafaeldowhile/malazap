@@ -39,7 +39,7 @@ class WhatsapiMGP25Client implements SMSMessageInterface{
     {
       $this->connectAndLogin();
       $this->whatsProt->sendMessageComposing($to);
-      $this->whatsProt->sendMessageImage($to, $filepath);
+      $this->whatsProt->sendMessageImage($to, $image);
       $this->logoutAndDisconnect();
     }
 
