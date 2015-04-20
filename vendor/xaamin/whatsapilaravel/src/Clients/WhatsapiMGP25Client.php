@@ -32,6 +32,7 @@ class WhatsapiMGP25Client implements SMSMessageInterface{
         $this->connectAndLogin();
         $this->whatsProt->sendMessageComposing($to);
         $this->whatsProt->sendMessage($to, $message);
+        $this->whatsProt->poolMessage();
         $this->logoutAndDisconnect();
     }
 
@@ -40,6 +41,7 @@ class WhatsapiMGP25Client implements SMSMessageInterface{
       $this->connectAndLogin();
       $this->whatsProt->sendMessageComposing($to);
       $this->whatsProt->sendMessageImage($to, $image);
+      $this->whatsProt->poolMessage();
       $this->logoutAndDisconnect();
     }
 
